@@ -15,7 +15,7 @@ The cryptographic library used is crypto-js
 
 JSON Web Tokens consist of three parts (Header, Payload, Signature) separated by dots (.).
 The JWT may looks like this in a glimpse   
-Header.Payload.Signature  
+**Header.Payload.Signature**  
 
 The Header and Payload are Base64Url encoded JSON string separated by dots (.).
 
