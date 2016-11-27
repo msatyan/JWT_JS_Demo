@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch JWT_JS_Demo.html with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceRoot}/JWT_JS_Demo.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "Launch localhost with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true            
+        },
+        {
+            "name": "Attach with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true
+        }
+    ]
+}

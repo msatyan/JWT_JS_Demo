@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>JWT JS Demo</title>
+
+    <link rel="stylesheet" href="MyApiTest1.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-alpha.5/css/bootstrap.css"/>
+
+    <!-- crypto -->
+	<script type="text/javascript" src="crypto-js/src/core.js"></script>
+	<script type="text/javascript" src="crypto-js/src/enc-base64.js"></script>
+	<script type="text/javascript" src="crypto-js/src/hmac.js"></script>
+	<script type="text/javascript" src="crypto-js/src/sha256.js"></script>
+
+    <script type="text/javascript" src="JWT_JS_Demo.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        </br>
+        <h1 class="title">JWT demo by using pure JavaScript</h1>
+        </br>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                
+                <div class="my-bd-callout my-bd-callout-warning">
+                    <h6>Header Used</h6>
+                    <p id="HeaderText">
+                        { "alg": "HS256", "typ": "JWT" }                  
+                    </p>
+                </div>
+				
+				<div>
+				    <label>Enter JSON Payload</label>
+					<textarea class="form-control" id="PayloadText">
+                    { "iss": "Me.com", "sub": "Demo",  "aud": "You",
+                    "exp": "t1", "nbf": "t2", "iat": "t3", "jti": "t4"}
+                    </textarea>
+				</div>
+	
+                </br>
+
+                <div class="input-group">
+
+
+                    <input type="text" id="SecretText" class="form-control" 
+                    placeholder="secret" 
+                    value="secret">
+
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button" 
+                            onclick="DemoObj.onCreateJWTButtonClick();"> Create JWT
+                        </button>
+                    </span>                    
+                </div>
+
+                <div class="my-bd-callout my-bd-callout-warning  p-token">
+                    <h6>The JWT is:</h6>
+                    <p id="JWT"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

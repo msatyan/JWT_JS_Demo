@@ -1,0 +1,36 @@
+
+.p-token { word-break: break-all }
+
+.my-bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+.my-bd-callout-primary {
+    border-left-color: #0275d8;
+}
+
+.my-bd-callout-secondary {
+    border-left-color: #ccc;
+}
+
+.my-bd-callout-success {
+    border-left-color: #5cb85c;
+}
+
+.my-bd-callout-info {
+    border-left-color: #5bc0de;
+}
+
+.my-bd-callout-warning {
+    border-left-color: #f0ad4e;
+}
+
+.my-bd-callout-danger {
+    border-left-color: #d9534f;
+}
+
