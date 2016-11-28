@@ -4,6 +4,8 @@ class JWT_JS_Demo
 {
     constructor() 
     {
+        this.StrLib = new CStrLib();
+
         /*
         this.Header = { "alg": "HS256", "typ": "JWT" };
 		this.Payload = 
@@ -21,25 +23,28 @@ class JWT_JS_Demo
 
     getBase64Encoded(rawStr) 
     {
-        var wordArray = CryptoJS.enc.Utf8.parse(rawStr);
-        var base64 = CryptoJS.enc.Base64.stringify(wordArray);
+        let wordArray = CryptoJS.enc.Utf8.parse(rawStr);
+        let base64 = CryptoJS.enc.Base64.stringify(wordArray);
         return base64;
     }
 
     getBase64Decoded(encodedStr) 
     {
-        var parsedWordArray = CryptoJS.enc.Base64.parse(encodedStr);
-        var parsedStr = parsedWordArray.toString(CryptoJS.enc.Utf8);
+        let parsedWordArray = CryptoJS.enc.Base64.parse(encodedStr);
+        let parsedStr = parsedWordArray.toString(CryptoJS.enc.Utf8);
         return parsedStr;
     }
 
     CreateJWT(Header, Payload, Secret) 
     {
-        var base64Header = this.getBase64Encoded(Header);
-        var base64Payload = this.getBase64Encoded(Payload);
+        let base64Header = this.getBase64Encoded(Header);
 
-        var signature = CryptoJS.HmacSHA256(base64Header + "." + base64Payload, Secret);
-        var base64Sign = CryptoJS.enc.Base64.stringify(signature);
+        // let base64Payload = this.getBase64Encoded(Payload);
+        // Use the Base64 conversion from our StrLib.
+        let base64Payload = this.StrLib.toBase64(Payload);
+
+        let signature = CryptoJS.HmacSHA256(base64Header + "." + base64Payload, Secret);
+        let base64Sign = CryptoJS.enc.Base64.stringify(signature);
 
         let jwt = base64Header + "." + base64Payload + "." + base64Sign;
         return (jwt);

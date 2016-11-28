@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+       // Defines whether an open brace is put onto a new line for functions or not.
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+
+    // Defines whether an open brace is put onto a new line for control blocks or not.
+    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+
+    // Defines whether an open brace is put onto a new line for functions or not.
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+
+    // Defines whether an open brace is put onto a new line for control blocks or not.
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true
+}
