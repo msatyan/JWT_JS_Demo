@@ -41,7 +41,9 @@ class JWT_JS_Demo
 
         // let base64Payload = this.getBase64Encoded(Payload);
         // Use the Base64 conversion from our StrLib.
-        let base64Payload = this.StrLib.toBase64(Payload);
+        // make it URL-safe
+        let UrlSafe = true;
+        let base64Payload = this.StrLib.toBase64(Payload, UrlSafe);
 
         let signature = CryptoJS.HmacSHA256(base64Header + "." + base64Payload, Secret);
         let base64Sign = CryptoJS.enc.Base64.stringify(signature);
