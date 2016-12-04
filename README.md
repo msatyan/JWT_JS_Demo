@@ -32,7 +32,6 @@ The header contains 2 parts:
 
 The type, which is JWT and then the hashing algorithm to used, such as HMAC SHA256 or RSA  
 (in this example I have used HMAC SHA256)  
-Here is an example of Header:
 
 
 #### Payload
@@ -49,9 +48,10 @@ Here is an example of Header:
 }
 ```
 
-The payload will carry the bulk of our JWT, also called the JWT Claims. This is where we will put the information that we want to transmit and other information about our token
-The payload contains the bulk of the JWT; we may put any information that explains about this token, in general it is being called the JWT Claims
-We may embed multiple claims in a JWT. Some claim names are reserved, though not mandatory.
+The payload will carry the bulk of our JWT, it may also referred as JWT Claims (We may embed multiple claims in a JWT).  
+The payload is where we will put the information about the token that we want to transmit to the other end.  
+We may put any information in the payload that explains about the token  
+FYI: Some claim names are reserved, though not mandatory.
 
 ##### Some of the reserved claims are:
 * iss: The issuer of the token
